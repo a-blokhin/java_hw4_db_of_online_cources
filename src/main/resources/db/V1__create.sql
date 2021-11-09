@@ -32,7 +32,7 @@ CREATE TABLE lecture
 
 CREATE TABLE lecture_teacher
 (
-    teacher_id INT NOT NULL REFERENCES teacher (id) ON UPDATE SET NULL,
+    teacher_id INT NOT NULL REFERENCES teacher (id) ON UPDATE CASCADE ON DELETE CASCADE,
     lecture_id INT NOT NULL REFERENCES lecture (id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
